@@ -30,6 +30,7 @@ type Repository interface {
 	DeleteBook(ctx context.Context, id int64) (Book, error)
 	GetBook(ctx context.Context, id int64) (Book, error)
 	ListBooks(ctx context.Context) ([]Book, error)
+	ListAuthorsByAgentID(ctx context.Context, agentID int64) ([]Author, error)
 }
 
 type repoSvc struct {
